@@ -140,7 +140,7 @@ class MutationChecker implements OperationCompletionListener{
 				long compare_CAS = Long.parseLong(dest_CAS);
 				if (compare_CAS != mutation.getExpectedCAS())
 				{
-					System.out.print ("CAS Mismatch for Key: " + mutation.getKey() + "Source: " + mutation.getExpectedCAS() + " Dest:" + compare_CAS);
+					System.out.print ("CAS Mismatch for Key: " + mutation.getKey() + " Source: " + mutation.getExpectedCAS() + " Dest: " + compare_CAS);
 					this.rescheduleOrComplete();
 				}
 				else
